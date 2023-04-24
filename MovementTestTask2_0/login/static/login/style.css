@@ -1,3 +1,9 @@
-.fieldWrapper{
+.fieldWrapper {
     margin: 10px;
+}
+
+body{
+    background-color: darkblue;
+    color:white;
+    font:20px "Comic Sans MS";
 }

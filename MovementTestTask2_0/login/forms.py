@@ -6,7 +6,6 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('name', "surname", 'birth_date')
-        #birth_date = forms.DateField(widget=forms.DateInput(attrs={'class': 'datepicker'}))
         widgets = {
             'birth_date': forms.DateInput(
                 format=('%Y-%m-%d'),
@@ -15,5 +14,3 @@ class UserForm(forms.ModelForm):
                        'type': 'date'
                        }),
         }
-
-
