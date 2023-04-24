@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{%  static 'login/style.css' %}">
 
-<form action="{% url 'success'  %}" method="post" enctype="multipart/form-data">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
    {% for field in form %}
     <div class="fieldWrapper">
