@@ -1,8 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
+from rest_framework import viewsets
+from .models import User
 from .forms import UserForm
+from .serializers import UserSerializer
 
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 def index(request):
     context = {}
@@ -18,3 +24,4 @@ def index(request):
 
 def success_create(request, name, surname):
     return render(request, "login/success.html", {'name': name, 'surname': surname})
+
