@@ -11,3 +11,8 @@ def index(request):
         form.save()
     context['form'] = form
     return render(request, "login/index.html", context)
+
+
+
+def success_create(request, name):
+    return render(request, "login/success.html")
